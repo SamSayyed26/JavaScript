@@ -270,7 +270,7 @@ class Animal {
 class Cat extends Animal{
     #catName;
     constructor(name, type, age){
-        super(name, type, age);
+        super(name, type, age); // It calls the parent class's constructor
         this.#catName = name;
         // You can have code before super(), but you cannot access 'this' before super()
     }
