@@ -150,6 +150,41 @@ fakeRequestPromise("books.com/page1")
     .then(res => {
         console.log("Resolved 3", res);
     })
-    .catch(err =>{
+    .catch(err => {
         console.log("Error", err);
     })
+
+
+// async/await
+// Async and await is just syntactic sugar over the callback hell.
+// It uses Promises and async/await to resolve this issue
+
+async function newPromiseFunction(num) {
+    const delay = Math.floor(Math.random() * 4500) + 500;
+    let time = new Promise((res, rej) => {
+        setTimeout(() => {
+            if (delay > 4000) {
+                rej("Error");
+            }
+            else {
+                res(num * num);
+            }
+        }, delay);
+    });
+    let ans = await time;
+    alert(ans);
+}
+newPromiseFunction(2);
+
+async function cube(width) {
+    const areaOfSquare = new Promise((resolve, reject) => {
+        resolve(width*width);
+        reject("Error in calculating the data of the square");
+    });
+
+    const areaOfCube = await areaOfSquare*6;
+
+    console.log("AREA of Cube: ", areaOfCube)
+}
+
+cube(2);
