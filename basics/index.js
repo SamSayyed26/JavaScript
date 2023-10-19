@@ -195,10 +195,13 @@ const a5 = "Cat" && "Dog";
 console.log(a5);
 
 // const a1 = 11 | 26;
-const a1 =   11 | 10;
+// const a1 =   11 | 10;
+const a1 = 5 << 2;
 // Not understanding the behavior of bitwise operator
 
 console.log(a1);
+let l1 = "00000000000000000000000000010100";
+console.log(l1.length)
 
 const a7 = "Cat" || true;
 console.log(a7) // t && f returns false
