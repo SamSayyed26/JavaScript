@@ -169,7 +169,6 @@ console.log(o, n);
 function getThis() {
   return this;
 }
-
 let obj1 = {
   name: "Object 1",
   type: "Object",
@@ -195,7 +194,7 @@ const a5 = "Cat" && "Dog";
 console.log(a5);
 
 // const a1 = 11 | 26;
-const a1 =   11 | 10;
+const a1 = 11 | 10;
 // Not understanding the behavior of bitwise operator
 
 console.log(a1);
@@ -210,3 +209,8 @@ console.log(6 in trees); // returns false
 
 
 console.log(typeof (NaN));
+function Test() {
+  // don't return anything (equivalent to returning undefined)
+}
+
+new Test() instanceof Test;
