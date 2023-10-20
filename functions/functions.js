@@ -88,3 +88,36 @@ function restParams(multiplier, ...theArgs) {
 
 let arr = restParams(2, 1, 2, 3, 4);
 console.log(arr);
+
+// Generator Functions
+
+function* generatorFunction(){
+    return "Hello There Sumayyah!";
+}
+
+let getFunction = generatorFunction();
+
+console.log(getFunction);
+console.log(getFunction.next());
+console.log(getFunction);
+
+
+// Pausing the function with yield keyword
+const userName = "Sumayyah Sayyed";
+const company = "Focusteck";
+const position = "Associate Software Engineer";
+
+
+function* generatorFunctionWithYield(){
+    yield `Hello ${userName}`
+    yield `Your company is ${company}`
+    yield `Your developer position is ${position}`
+
+    return "Good Luck!"
+}
+
+const newGenerator = generatorFunctionWithYield();
+console.log(newGenerator.next());
+console.log(newGenerator.next());
+console.log(newGenerator.next());
+console.log(newGenerator.next());
